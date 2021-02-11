@@ -1,0 +1,96 @@
+public class Complex {
+
+private double real;
+private double imaginary;
+
+public static int numberofComplex;
+
+public Complex(double real,double imaginary)
+{
+    this.real=real;
+    this.imaginary=imaginary;
+    numberofComplex++;
+
+
+}
+public Complex()
+{
+    this(0.0,0.0);
+
+}
+
+public double getReal(){
+
+    return this.real;
+}
+
+public void setReal(double real){
+    this.real=real;
+
+
+}
+public double getImaginary(){
+
+    return this.imaginary;
+
+}
+public void setImaginary(double imaginary)
+{
+
+    this.imaginary=imaginary;
+
+
+}
+
+public Complex plus(Complex other){//ikinci bir complex sayi nesnesi oluþturduk
+
+    double sumReal=this.real+other.real;
+    double sumimaginary=this.imaginary+other.imaginary;
+    return new Complex(sumReal,sumimaginary);
+
+}
+public int getNumberofComplex(){
+
+    return numberofComplex;
+
+
+}
+@Override
+
+    public String toString(){
+
+    return this.real+"+"+this.imaginary+"i";
+}
+@Override
+    public boolean equals(Object obj)
+{
+    if(obj==null)
+    {
+
+        return false;
+    }
+    if(obj==this)
+    {
+        return true;
+    }
+    if(!(obj instanceof Complex))
+    {
+
+        return false;
+    }
+
+    Complex c=(Complex)obj;
+    return this.real==c.real&&this.imaginary==c.imaginary;
+}
+
+
+
+
+
+
+
+
+
+    
+
+}

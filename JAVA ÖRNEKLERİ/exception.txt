@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class vizecalýsma3 {
+
+    public static int quotient (int num1 , int num2 ) {
+        if ( num2 == 0)
+            throw new ArithmeticException (" Divisor cannott be zero ");
+        return num1 / num2 ;
+    }
+
+    
+
+
+    public static void main(String[] args) {
+int yarýcapý;
+      
+
+        Scanner scn=new Scanner(System.in);
+        System.out.println("birinci sayiyi giriniz");
+        int input=scn.nextInt();
+        System.out.println("ikinci sayiy giriniz");
+        int input2=scn.nextInt();
+
+        try{
+
+            double sonuc=quotient(input,input2);
+            System.out.println("sonucunz:"+sonuc);
+
+
+
+        }catch (Exception e)
+        {
+            System.out.println(e);
+            System.out.println("hata yakaladým");
+
+
+
+        }
+
+
+
+
+
+    }
+
+
+}
